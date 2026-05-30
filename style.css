@@ -399,7 +399,7 @@ a {
 
 /* SCREENSHOTS */
 
-#screenshots {
+#wallpapers {
   width: 100%;
   min-height: 0;
   padding-bottom: 4rem;
@@ -539,6 +539,14 @@ a {
   border: 0.1rem solid rgba(205, 187, 106, 0.45);
   transition: all 250ms ease;
   z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(2rem);
+}
+ .back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .back-to-top img {
@@ -550,7 +558,7 @@ a {
   transition: opacity 500ms ease-in-out;
 }
 
-.icone-rato {
+.icone-poring {
   position: absolute;
   opacity: 0;
   transition: opacity 500ms ease-in-out;
@@ -839,7 +847,7 @@ footer .separator img {
     max-width: 91%;
   }
 
-  #screenshots .tittle {
+  #wallpapers .tittle {
     flex-direction: column;
   }
 

@@ -31,7 +31,7 @@ window.addEventListener("load", start);
 
 const backtoTop = document.querySelector(".back-to-top");
 const iconeSeta = document.querySelector(".arrow-up");
-const iconeRato = document.querySelector(".icone-rato");
+const iconeRato = document.querySelector(".icone-poring");
 
 backtoTop.onmouseover = () => {
   iconeSeta.style.opacity = 0;
@@ -45,9 +45,9 @@ backtoTop.onmouseout = () => {
 
 function backtoTopScrollReveal() {
   if (scrollY > 900) {
-    backtoTop.classList.add("back-to-top");
+    backtoTop.classList.add("show");
   } else {
-    backtoTop.classList.remove("back-to-top");
+    backtoTop.classList.remove("show");
   }
 }
 
@@ -90,12 +90,8 @@ const rotateY = ((x - centerX) / centerX) * 20;
 card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
 
 if (img) {
-  img.style.transform = "scale(1.1)";
+  img.style.transform = "scale(1.03)";
 }
-
-    if (img) {
-      img.style.transform = "scale(1.03)";
-    }
   });
 
   card.addEventListener("mouseleave", () => {
