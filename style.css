@@ -23,6 +23,8 @@ body {
   font-family: var(--main-font);
   color: var(--golden-color);
   background-color: #000;
+   caret-color: transparent;
+  
 }
 
 li,
@@ -39,22 +41,38 @@ a {
 
 .inicial {
   width: 100%;
-  max-width: 100vw;
-  height: 49vw;
-  max-height: 100vh;
-  background-attachment: fixed;
+  overflow: hidden;
+  position: relative;
 }
 
 .capa-inicial {
   width: 100%;
-  height: 100%;
+  height: 100vh;
+
   background-image: url("./assets/img/Ragnarok-Online-Wallpaper-in-2019-Wallpaper-Games-Hd-desktop.jpg");
-  background-size: 100%;
-  background-position: center top;
+  background-size: cover;
   background-repeat: no-repeat;
-  position: relative;
+  background-position: center top;
 }
 
+/* MOBILE */
+@media (max-width: 768px) {
+  .capa-inicial {
+    height: 65vh;
+
+    /* move a imagem */
+    background-position: 35% top;
+  }
+}
+
+@media (max-width: 480px) {
+  .capa-inicial {
+    height: 58vh;
+
+    /* enquadramento do celular */
+    background-position: 38% top;
+  }
+}
 /* MENU */
 
 .menu-container {
@@ -630,16 +648,6 @@ footer .separator img {
 }
 
 @media (max-width: 1100px) {
-  .inicial {
-    min-height: 100vh;
-  }
-
-  .capa-inicial {
-    background: url("./assets/img/mobile-background 2.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
 
   .group-age {
     padding-top: 3rem;
@@ -1302,37 +1310,93 @@ footer .separator img {
     width: 90px;
   }
 }
-/* =========================
-   HERO MOBILE RESPONSIVO
-========================= */
 
-html,
-body {
-  overflow-x: hidden;
+/* HERO MOBILE */
+
+@media (max-width: 768px) {
+  .inicial {
+    height: 56.25vw;
+    min-height: 0;
+    max-height: none;
+  }
+
+  .capa-inicial {
+    height: 100%;
+    background-image: url("./assets/img/Ragnarok-Online-Wallpaper-in-2019-Wallpaper-Games-Hd-desktop.jpg") !important;
+    background-size: 100% auto !important;
+    background-position: center top !important;
+    background-repeat: no-repeat !important;
+  }
 }
 
-@media screen and (max-width: 768px) {
-  .inicial {
-    min-height: 100vh;
-    height: auto;
-    overflow: hidden;
+/* =========================
+   MENU MOBILE IGUAL AO DESKTOP
+========================= */
+
+@media (max-width: 900px) {
+  .menu-container {
+    justify-content: center;
+    padding: 1rem;
   }
 
-  .capa-inicial,
-  #slider {
+  .menu-fast-access {
     width: 100%;
-    height: auto;
-    min-height: 45rem;
+    justify-content: center;
+    margin-left: 0;
   }
 
-  #slider img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  #btn-mobile {
+    display: none !important;
   }
 
-  .petals {
-    pointer-events: none;
-    overflow: hidden;
+  .rat-icon-menu {
+    display: none;
+  }
+
+  .menu-options {
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    visibility: visible !important;
+    overflow: visible !important;
+
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: center;
+
+    gap: 1.5rem;
+    padding-right: 0;
+
+    background: transparent !important;
+  }
+
+  .menu-options a {
+    display: block !important;
+  }
+
+  .menu-options a::after {
+    display: none;
+  }
+
+  .menu-options a li {
+    font-size: 1.5rem;
+    white-space: nowrap;
+  }
+
+  .menu-options.mobile-ativo {
+    height: auto !important;
+    padding-bottom: 0 !important;
+    gap: 1.5rem !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .menu-options {
+    gap: 1rem;
+  }
+
+  .menu-options a li {
+    font-size: 1.2rem;
   }
 }
