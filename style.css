@@ -1198,3 +1198,107 @@ footer .separator img {
   color: #000;
   transform: translateY(-0.3rem);
 }
+/* =========================
+   RESPONSIVIDADE MOBILE
+========================= */
+
+@media screen and (max-width: 768px) {
+
+  /* layout vertical */
+  .class-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  /* imagem da evolução */
+  .class-tree {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .class-tree img {
+    width: 95%;
+    max-width: 420px;
+    height: auto;
+  }
+
+  /* bloco direito */
+  .class-info {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .info-block {
+    width: 100%;
+    padding: 1.5rem;
+    box-sizing: border-box;
+  }
+
+  /* título principal */
+  .class-page-title h1 {
+    font-size: 2.3rem;
+    text-align: center;
+  }
+
+  /* títulos internos */
+  .info-block h2 {
+    font-size: 1.8rem;
+  }
+
+  /* texto */
+  .class-info p {
+    font-size: 1rem;
+    line-height: 1.8;
+    text-align: justify;
+  }
+
+  /* lista */
+  .class-info li {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  /* sprite + lista */
+  .characteristics-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  /* sprite */
+  .sprite-selector {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .class-character {
+    width: 180px;
+    max-width: 100%;
+  }
+
+  /* botões sprite */
+  .sprite-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .sprite-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 1rem;
+  }
+
+  /* tracejado do título */
+  .class-page-title img {
+    width: 90px;
+  }
+}
